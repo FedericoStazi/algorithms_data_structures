@@ -18,10 +18,12 @@ int main(){
     //first fibonacci numbers
     for(int i=0; i<20; i++)
         cout<<int_fibonacci(i)<<" ";
-    cout<<endl;
+    cout<<endl<<endl;
 
     //really big fibonacci number (incorrect because of integer overflow)
+    int start = clock();
     cout<<int_fibonacci(1e18)<<endl;
+    cout<<"time: "<<((float)(clock()-start)/CLOCKS_PER_SEC)<<" s"<<endl<<endl;
 
     //biggest fibonacci number using long doubles
     cout<<double_fibonacci(23600)<<endl;
